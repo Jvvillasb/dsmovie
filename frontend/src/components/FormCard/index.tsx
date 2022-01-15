@@ -18,7 +18,7 @@ const FormCard = ({ movieId }: Props) => {
 		axios.get(`${BASE_URL}/movies/${movieId}`).then((response) => {
 			setMovie(response.data);
 		});
-	}, []);
+	}, [movieId]);
 
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
